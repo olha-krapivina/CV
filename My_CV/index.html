@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CV</title>
+</head>
+<body>
+    <div class="bg-wrapper">
+        <div class="bg-grad one active"></div>
+        <div class="bg-grad two"></div>
+        <div class="bg-grad three"></div>
+        <div class="bg-grad four"></div>
+        <div class="bg-grad five"></div>
+        <div class="bg-grad six"></div>
+    </div>
+
+    <script type="text/javascript">
+        $(function(){
+        let transTime = 5000;
+        let numBgColors = $('.bg-grad').length;
+        let bgtrans = setInterval(function(){
+        if($('.bg-grad.active').index() == ($('.bg-grad').length-1)){
+        $('.bg-grad.active').removeClass('active');
+        $('.bg-grad').eq(0).addClass('active');
+        }else{
+        var curIndex = $('.bg-grad.active').index();
+        $('.bg-grad.active').removeClass('active');
+        $('.bg-grad').eq(curIndex+1).addClass('active');
+        }
+        },transTime);
+        });
+    </script>
+
+    <div class="wrapper">
+        <div class="_container">
+            <header class="header">
+                <div class="header__banner">
+                    <img src="./img/avatar.jpg" alt="me">
+                </div>
+                <div class="header__title">
+                    <h1>Olha Krapivina</h1>
+                    <h2>Front-End Developer</h2>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="main__box">
+                    <div class="main-content">
+                        <h3>PERSONAL PROFILE</h3>
+                        <p>I'm a beginner Front-End developer with experience in this direction for six months.</p>
+                        <p>My practical experience goes with associated with freelance. I have no commercial work experience and no team work experience in the company yet.</p>
+                        <p>But I passed a free 2.5 month Front-End course at the Epam company. During this time, I have perfected my skills better than during the time when I studied this direction myself.</p>
+                        <p>I consider my strength to be the ability to learn quickly.</p>
+                    </div>
+                    <div class="main-content">
+                        <h3>SKILLS</h3>
+                        <ul class="main__list-skills">
+                            <li class="main__item-skill">HTML5</li>
+                            <li class="main__item-skill">CSS3/SCSS</li>
+                            <li class="main__item-skill">SASS/LESS</li>
+                            <li class="main__item-skill">Bootstrap</li>
+                            <li class="main__item-skill">JavaScript (basic)</li>
+                            <li class="main__item-skill">Git</li>
+                            <li class="main__item-skill">Figma</li>
+                            <li class="main__item-skill">Photoshop</li>
+                            <li class="main__item-skill">Jira</li>
+                        </ul>
+                    </div>
+                    <div class="main-content">
+                        <h3>EDUCATION</h3>
+                        <p>Oles Honchar Dnipro National University</p>
+                        <p>Bachelor of Science Physics and Astronomy,<br>2021</p>
+                    </div>
+                    <div class="main-content">
+                        <h3>WORK EXPERIENCE</h3>
+                        <p>No commercial work experience.</p>
+                        <p>Freelance.</p>
+                    </div>
+                    <div class="main-content">
+                        <h3>CONTACTS</h3>
+                        <ul class="main__list-contacts">
+                            <li class="main__item-contact">
+                                <a class="main__link-contact main__link-contact__location" href="#">Dnipro, Ukraine</a>
+                            </li>
+                            <li class="main__item-contact">
+                                <a class="main__link-contact main__link-contact__linkedin" href="https://www.linkedin.com/in/olha-krapivina/">LinkedIn</a>
+                            </li>
+                            <li class="main__item-contact">
+                                <a class="main__link-contact main__link-contact__github" href="https://github.com/olha-krapivina">GitHub</a>
+                            </li>
+                        </ul>
+
+
+                        <h3 class="h-contacts">CONTACTS</h3>
+                        <div class="submenu">
+                            <ul class="submenu__list-contacts">
+                                <li class="submenu__item-contact">
+                                    <a class="submenu__link-contact submenu__link-contact__location" href="#"></a>
+                                </li>
+                                <li class="submenu__item-contact">
+                                    <a class="submenu__link-contact submenu__link-contact__linkedin" href="https://www.linkedin.com/in/olha-krapivina/"></a>
+                                </li>
+                                <li class="submenu__item-contact">
+                                    <a class="submenu__link-contact submenu__link-contact__github" href="https://github.com/olha-krapivina"></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <script>
+                            let flag = false;
+                            $('.h-contacts').click(function () {
+                                if(!flag) {
+                                    $('.submenu').slideDown();
+                                } else {
+                                    $('.submenu').slideUp();
+                                }
+                                flag = !flag;
+                            });
+                        </script>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
