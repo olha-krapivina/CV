@@ -25,8 +25,8 @@ a{
     width: 100%;
     height: 100%;
     opacity: 0;
-    -webkit-transition: opacity 5s linear;
-    transition: opacity 5s linear;
+    -webkit-transition: opacity 8s linear;
+    transition: opacity 8s linear;
     background: #e6b48b;
 }
       
@@ -159,7 +159,7 @@ a{
 .main__box{
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(0px, auto);
     column-gap: 60px;
     row-gap: 50px;
 
@@ -221,7 +221,7 @@ a{
 
         .main__link-contact{
             position: relative;
-            display: block;
+            display: inline-block;
             padding: 5px 0px 5px 25px;
             transition: 1s;
 
@@ -242,7 +242,19 @@ a{
                 top: 3px;
                 background-image: url('../img/icons/outline_location_on_black_36dp.png');
                 background-size: 25px;
-                display: inline-block;
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        .main__link-contact__email{
+            &::before{
+                position: absolute;
+                content: '';
+                left: -3px;
+                top: 3px;
+                background-image: url('../img/icons/outline_email_black_36dp.png');
+                background-size: 25px;
                 width: 25px;
                 height: 25px;
             }
@@ -255,7 +267,6 @@ a{
                 left: 0;
                 background-image: url('../img/icons/icon-linkedin.png');
                 background-size: 20px;
-                display: inline-block;
                 width: 20px;
                 height: 20px;
             }
@@ -268,7 +279,6 @@ a{
                 left: 0;
                 background-image: url('../img/icons/icon-github.png');
                 background-size: 20px;
-                display: inline-block;
                 width: 20px;
                 height: 20px;
             }
@@ -278,13 +288,81 @@ a{
 
 .submenu__list-contacts{
     display: flex;
+    .submenu__item-contact{
+        &:not(:last-child){
+            margin-right: 15px;
+        }
+    }
     .submenu__link-contact{
-        display: block;
-        width: 30px;
-        height: 30px;
-        background-color: red;
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        transition: 1s;
+
+        &:focus{
+            border: none;
+        }
+        &:hover{
+            background-color: #b6aaaa;;
+        }
     }
     .submenu__link-contact__location{
         background: url(../img/icons/outline_location_on_black_36dp.png) no-repeat center;
+        background-size: 35px;
+        background-color: rgb(120, 204, 207);
+        width: 45px;
+        height: 45px;
+    }
+    .submenu__link-contact__email{
+        background: url(../img/icons/outline_email_black_36dp.png) no-repeat center;
+        background-size: 30px;
+        background-color: rgb(120, 204, 207);
+        width: 45px;
+        height: 45px;
+    }
+    .submenu__link-contact__linkedin{
+        background: url(../img/icons/icon-linkedin.png) no-repeat center;
+        background-size: 25px;
+        background-color: rgb(120, 204, 207);
+        width: 45px;
+        height: 45px;
+    }
+    .submenu__link-contact__github{
+        background: url(../img/icons/icon-github.png) no-repeat center;
+        background-size: 30px;
+        background-color: rgb(120, 204, 207);
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.main-content__desktop{
+    @media screen and (max-width: 400px) {
+        display: none;
+    }
+}
+
+.main-content__modile{
+    display: none;
+
+    @media screen and (max-width: 400px) {
+        display: block;
+    }
+
+    .h-contacts{
+        cursor: pointer;
+        transition: 1s;
+        @media screen and (max-width: 400px) {
+            display: block;
+        }
+        &:hover{
+            color: rgb(120, 204, 207);
+        }
+    }
+    .submenu{
+        @media screen and (max-width: 400px) {
+            display: none;
+        }
     }
 }
