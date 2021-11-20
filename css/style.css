@@ -364,7 +364,7 @@ a {
   height: 45px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .main-content__desktop {
     display: none;
   }
@@ -374,7 +374,7 @@ a {
   display: none;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .main-content__modile {
     display: block;
   }
@@ -386,7 +386,7 @@ a {
   transition: 1s;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .main-content__modile .h-contacts {
     display: block;
   }
@@ -396,7 +396,7 @@ a {
   color: #78cccf;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .main-content__modile .submenu {
     display: none;
   }
