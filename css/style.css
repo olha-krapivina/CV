@@ -14,53 +14,6 @@ a {
   color: #000;
 }
 
-.bg-grad {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 8s linear;
-  transition: opacity 8s linear;
-  background: #e6b48b;
-}
-
-.bg-grad.active {
-  opacity: 1;
-}
-
-.bg-grad.one {
-  background: #e6b48b;
-  background: linear-gradient(60deg, #e6b48b 0%, #e99866 24%, #db8956 74%, #e6b48b 100%);
-}
-
-.bg-grad.two {
-  background: #d46680;
-  background: linear-gradient(60deg, #d46680 0%, #da4e63 24%, #c94978 74%, #d46680 100%);
-}
-
-.bg-grad.three {
-  background: #ba70dd;
-  background: linear-gradient(60deg, #ba70dd 0%, #9766bd 24%, #a96db3 74%, #ba70dd 100%);
-}
-
-.bg-grad.four {
-  background: #71a4db;
-  background: linear-gradient(60deg, #71a4db 0%, #7da0ca 24%, #5f90a8 74%, #71a4db 100%);
-}
-
-.bg-grad.five {
-  background: #69ca91;
-  background: linear-gradient(60deg, #69ca91 0%, #7cc28f 24%, #6ac490 74%, #69ca91 100%);
-}
-
-.bg-grad.six {
-  background: #ddc376;
-  background: linear-gradient(60deg, #ddc376 0%, #c49e5c 24%, #cabc63 74%, #ddc376 100%);
-}
-
 .wrapper {
   min-width: 100%;
   padding: 10px;
@@ -215,13 +168,22 @@ a {
 }
 
 .main__box .main-content p:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 320px) {
   .main__box .main-content p {
     font-size: 16px;
   }
+}
+
+.main__box .main-content p span {
+  font-weight: bold;
+}
+
+.main__box .main-content .education-place {
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 320px) {
@@ -253,6 +215,11 @@ a {
   transition: 1s;
 }
 
+.main__list-contacts .main__item-contact .main__link-contact span {
+  font-weight: bold;
+  padding-left: 5px;
+}
+
 @media screen and (max-width: 320px) {
   .main__list-contacts .main__item-contact .main__link-contact {
     font-size: 16px;
@@ -260,7 +227,7 @@ a {
 }
 
 .main__list-contacts .main__item-contact .main__link-contact:hover {
-  color: #78cccf;
+  color: #348c8f;
 }
 
 .main__list-contacts .main__item-contact .main__link-contact__location::before {
@@ -280,6 +247,17 @@ a {
   left: -3px;
   top: 3px;
   background-image: url("../img/icons/outline_email_black_36dp.png");
+  background-size: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.main__list-contacts .main__item-contact .main__link-contact__telegram::before {
+  position: absolute;
+  content: '';
+  left: -3px;
+  top: 3px;
+  background-image: url("../img/icons/icon-telegram.png");
   background-size: 25px;
   width: 25px;
   height: 25px;
@@ -348,6 +326,14 @@ a {
   height: 45px;
 }
 
+.submenu__list-contacts .submenu__link-contact__telegram {
+  background: url(../img/icons/icon-telegram.png) no-repeat center;
+  background-size: 30px;
+  background-color: #78cccf;
+  width: 45px;
+  height: 45px;
+}
+
 .submenu__list-contacts .submenu__link-contact__linkedin {
   background: url(../img/icons/icon-linkedin.png) no-repeat center;
   background-size: 25px;
@@ -394,11 +380,5 @@ a {
 
 .main-content__modile .h-contacts:hover {
   color: #78cccf;
-}
-
-@media screen and (max-width: 500px) {
-  .main-content__modile .submenu {
-    display: none;
-  }
 }
 /*# sourceMappingURL=style.css.map */
