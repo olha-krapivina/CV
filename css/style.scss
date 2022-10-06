@@ -220,6 +220,19 @@ a{
             }
         }
 
+        .main__link-contact__phone-number{
+            &::before{
+                position: absolute;
+                content: '';
+                left: -3px;
+                top: 3px;
+                background-image: url('../img/icons/icon-phone-number.png');
+                background-size: 25px;
+                width: 25px;
+                height: 25px;
+            }
+        }
+
         .main__link-contact__telegram{
             &::before{
                 position: absolute;
@@ -289,6 +302,13 @@ a{
     }
     .submenu__link-contact__email{
         background: url(../img/icons/outline_email_black_36dp.png) no-repeat center;
+        background-size: 30px;
+        background-color: rgb(120, 204, 207);
+        width: 45px;
+        height: 45px;
+    }
+    .submenu__link-contact__phone-number{
+        background: url(../img/icons/icon-phone-number.png) no-repeat center;
         background-size: 30px;
         background-color: rgb(120, 204, 207);
         width: 45px;
